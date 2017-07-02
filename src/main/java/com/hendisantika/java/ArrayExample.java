@@ -7,7 +7,7 @@ import java.io.IOException;
 /**
  * Created by hendisantika on 7/2/17.
  */
-public class ArrayExampl {
+public class ArrayExample {
     public int sumValues(int[] nums) {
         int res = 0;
 

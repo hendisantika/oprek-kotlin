@@ -1,5 +1,6 @@
 package com.hendisantika.oprek.test;
 
+import com.hendisantika.oprek.campuran.MathematicsOperations;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
