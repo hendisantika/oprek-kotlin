@@ -31,7 +31,7 @@ class ArrayTest {
         val constructors = instance.constructors
 
         assertEquals(constructors.size, 1)
-        assertEquals(constructors[0].name, "com.baeldung.java.Customer")
+        assertEquals(constructors[0].name, "com.hendisantika.java.Customer")
     }
 
     fun makeReadFile() {
