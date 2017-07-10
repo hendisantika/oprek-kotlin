@@ -1,5 +1,6 @@
 package com.hendisantika.oprek.test
 
+import com.hendisantika.oprek.campuran.User
 import org.junit.Test
 import kotlin.test.assertTrue
 
@@ -7,17 +8,17 @@ import kotlin.test.assertTrue
  * Created by hendisantika on 7/10/17.
  */
 class ListToMapTest {
-    val user1 = User("John", 18, listOf("Hiking, Swimming"))
-    val user2 = User("Sara", 25, listOf("Chess, Board Games"))
-    val user3 = User("Dave", 34, listOf("Games, Racing sports"))
-    val user4 = User("John", 30, listOf("Reading, Poker"))
+    val user1 = User("Hendi", 18, listOf("Hiking, Swimming"))
+    val user2 = User("Sasuke", 25, listOf("Chess, Board Games"))
+    val user3 = User("Naruto", 34, listOf("Games, Racing sports"))
+    val user4 = User("Kakashi", 30, listOf("Reading, Poker"))
 
     @Test
     fun givenList_whenConvertToMap_thenResult() {
         val myList = listOf(user1, user2, user3)
         val myMap = myList.map { it.name to it.age }.toMap()
 
-        assertTrue(myMap.get("John") == 18)
+        assertTrue(myMap.get("Hendi") == 18)
     }
 
     @Test
@@ -25,7 +26,7 @@ class ListToMapTest {
         val myList = listOf(user1, user2, user3)
         val myMap = myList.associateBy({ it.name }, { it.hobbies })
 
-        assertTrue(myMap.get("John")!!.contains("Hiking, Swimming"))
+        assertTrue(myMap.get("Hendi")!!.contains("Hiking, Swimming"))
     }
 
     @Test
@@ -61,7 +62,7 @@ class ListToMapTest {
 
         myList.associateByTo(myMap, {it.name}, {it.age})
 
-        assertTrue(myMap.get("Dave") == 34)
+        assertTrue(myMap.get("Naruto") == 34)
     }
 
     @Test
@@ -71,6 +72,6 @@ class ListToMapTest {
 
         myList.associateByTo(myMap) {it.name}
 
-        assertTrue(myMap.get("Dave")!!.age == 34)
+        assertTrue(myMap.get("Kakashi")!!.age == 30)
     }
 }
